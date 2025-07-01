@@ -1,0 +1,179 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+:root{
+    --title-font:  "Anton", arial, sans-serif;
+    --text-font: "Share Tech Mono", monospace, arial, sans-serif;
+    --color-1: ;
+    --color-2: ;
+}
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3{
+    font-family: var(--title-font);
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+p{
+    font-family: var(--text-font);
+    font-weight: normal;
+}
+
+body.open{
+    overflow-y: hidden;
+}
+
+#overlay.open{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    background-color: #0000001f;
+    backdrop-filter: blur(10px);
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    padding-inline: 1.5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #ff0000;
+    z-index: 9;
+    background-color: #F8F5F0;
+}
+
+#menu-icon{
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+#logo{
+    font-size: 2rem;
+    color: #ff0000;
+}
+
+#login-btn{
+    text-transform: uppercase;
+    font-size: 1.05rem;
+    font-weight: 600;
+    padding: .3rem .6rem;
+
+    cursor: pointer;
+    border: 1px solid;
+    color: #ff0000;
+    background-color: transparent;
+}
+
+#menu-icon span{
+    width: 100%;
+    height: 2px;
+    background-color: #ff0000;
+    transition: all .3s ease-in-out;
+}
+
+#menu-icon.open span:nth-child(1){
+    transform: rotate(45deg) translateY(13px);
+}
+#menu-icon.open span:nth-child(2){
+    opacity: 0;
+}
+#menu-icon.open span:nth-child(3){
+    transform: rotate(-45deg) translateY(-13px);
+}
+
+#side-menu{
+    position: fixed;
+    width: 50%;
+    height: calc(100dvh - 50px);
+    left: -60%;
+    bottom: 0;
+    z-index: 9;
+    border-right: 1px solid #ff0000;
+    background-color: #F8F5F0;
+    transition: left .5s ease-in-out;
+}
+
+#side-menu.open{
+    left: 0;
+}
+
+#side-menu ul{
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+#side-menu a{
+    text-transform: uppercase;
+    font-size: 6vw;
+    text-decoration: none;
+    color: #ff0000;
+}
+
+#hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100dvh;
+    background-color: #F8F5F0;
+}
+
+#hero h1{
+    font-size: 20vw;
+    color: #ff0000;
+}
+
+#about{
+    padding-block: 1.5rem;
+    text-align: center;
+    background-color: #ff0000;
+}
+
+#about h2{
+    font-size: 15vw;
+}
+
+#about p{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+img{
+    width: 100%;
+}

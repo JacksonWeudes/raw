@@ -7,26 +7,76 @@
     <link rel="stylesheet" href="estilos/index.css">
 </head>
 <body>
-    <header>
-        <h1 id="logo">brutalcode</h1>
+    <div id="overlay"></div>
 
+    <header>
         <button id="menu-icon">
             <span></span>
             <span></span>
             <span></span>
         </button>
+
+        <h1 id="logo">brutalcode</h1>
+
+        <button id="login-btn">login</button>
     </header>
 
     <main>
-        <aside id="side-menu">
+        <aside id="side-menu" class="closed">
             <nav>
                 <ul>
-                    <li><a href="#">op</a></li>
-                    <li><a href="#">op</a></li>
-                    <li><a href="#">op</a></li>
+                    <li><a href="#">arquitetura</a></li>
+                    <li><a href="#">webdesign</a></li>
+                    <li><a href="#">exemplos</a></li>
                 </ul>
             </nav>
         </aside>
+
+        <section id="hero">
+            <h1>brutalismo no webdesign</h1>
+        </section>
+
+        <section id="about">
+            <h2>introdução</h2>
+            <p>
+                Inspirado no estilo arquitetônico pós-guerra, o Brutalismo no web design adota um estética simples e funcional, intencionalmente agressiva. Neste site você vai entender onde esse estilo nasceu, como evoluiu e porque ele ainda incomoda ou fascina quem navega por ele.
+            </p>
+        </section>
+
+        <img src="assets/nakagin-capsule-tower.webp" alt="nakagin capsule tower">
+
+        <section id="explore">
+            <h2>explore</h2>
+
+            <div class="card">
+                <h3>arquitetura brutalista</h3>
+                <p>
+                    entenda onde esse estilo nasceu e seus principais simbolos.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>brutalismo no web desing</h3>
+                <p>
+                    da estetica fria dos predios até á liguagem virtual da internet.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>exemplos</h3>
+                <p>
+                    veja sites reais que utilizam brutalismo como linguagem gráfica.
+                </p>
+            </div>
+        </section>
     </main>
+
+    <footer>
+        <h1>brutalcode</h1>
+
+        <a href="#">github</a>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
