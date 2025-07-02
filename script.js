@@ -8,3 +8,16 @@ menuBtn.addEventListener("click", () => {
     overlay.classList.toggle("open")
     document.body.classList.toggle("open")
 })
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    gsap.registerPlugin(ScrollTrigger)
+
+    gsap.from(".card", {
+        opacity: 0,
+        duration: 4,
+        scrollTrigger: {
+            trigger: ".card",
+        }
+    })
+})

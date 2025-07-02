@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>brutalismo</title>
+    <title>RAW</title>
     <link rel="stylesheet" href="estilos/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
     <div id="overlay"></div>
@@ -16,18 +17,16 @@
             <span></span>
         </button>
 
-        <h1 id="logo">brutalcode</h1>
-
-        <button id="login-btn">login</button>
+        <h1 id="logo">raw</h1>
     </header>
 
     <main>
         <aside id="side-menu" class="closed">
             <nav>
                 <ul>
-                    <li><a href="#">arquitetura</a></li>
-                    <li><a href="#">webdesign</a></li>
-                    <li><a href="#">exemplos</a></li>
+                    <li><a href="paginas/arquitetura.html" target="_self">arquitetura</a></li>
+                    <li><a href="paginas/webdesign.html" target="_self">webdesign</a></li>
+                    <li><a href="paginas/exemplos.html" target="_self">exemplos</a></li>
                 </ul>
             </nav>
         </aside>
@@ -43,40 +42,87 @@
             </p>
         </section>
 
-        <img src="assets/nakagin-capsule-tower.webp" alt="nakagin capsule tower">
+        <section id="hero2">
+
+        </section>
 
         <section id="explore">
             <h2>explore</h2>
 
-            <div class="card">
-                <h3>arquitetura brutalista</h3>
-                <p>
-                    entenda onde esse estilo nasceu e seus principais simbolos.
-                </p>
-            </div>
+            <div id="explore-cards">
+                <div class="card">
+                    <h3>arquitetura brutalista</h3>
+                    <img src="assets/nakagin-capsule-tower.webp" alt="nakagin-capsule-tower">
+                    <p>
+                        entenda onde esse estilo nasceu e seus principais simbolos.
+                    </p>                    
+                    <button>visitar</button>
+                </div>
 
-            <div class="card">
-                <h3>brutalismo no web desing</h3>
-                <p>
-                    da estetica fria dos predios até á liguagem virtual da internet.
-                </p>
-            </div>
+                <div class="card">
+                    <h3>webdesing</h3>
+                    <img src="assets/nakagin-capsule-tower.webp" alt="">
+                    <p>
+                        da estetica fria dos predios até á liguagem virtual da internet.
+                    </p>
+                    <button>visitar</button>
+                </div>
 
-            <div class="card">
-                <h3>exemplos</h3>
-                <p>
-                    veja sites reais que utilizam brutalismo como linguagem gráfica.
-                </p>
+                <div class="card">
+                    <h3>exemplos</h3>
+                    <img src="assets/nakagin-capsule-tower.webp" alt="">
+                    <p>
+                        veja sites reais que utilizam brutalismo como linguagem gráfica.
+                    </p>
+                    <button>visitar</button>
+                </div>
             </div>
+        </section>
+
+         <section id="login-screen">
+            <form action="">
+                <h1>login</h1>
+
+                <div class="input-box">
+                    <label for="email"><i class="ri-mail-fill"></i></label>
+                    <input type="email" id="email" required placeholder="email" autocomplete="none">
+                </div>
+
+                <div class="input-box">
+                    <label for="pass"><i class="ri-lock-2-fill"></i></label>
+                    <input type="password" id="pass" required placeholder="senha" autocomplete="none">
+                </div>
+
+                <div id="remember-box">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">lembrar senha?</label>
+                </div>
+
+                <div id="form-btn">
+                    <button>login</button>
+                </div>
+
+                <p>ou entre usando uma das plataformas</p>
+
+                <div id="social-links">
+                    <ul>
+                        <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
+                        <li><a href="#"><i class="ri-google-fill"></i></a></li>
+                        <li><a href="#"><i class="ri-linkedin-fill"></i></a></li>
+                        <li><a href="#"><i class="ri-github-fill"></i></a></li>
+                    </ul>
+                </div>
+            </form>            
         </section>
     </main>
 
     <footer>
-        <h1>brutalcode</h1>
-
-        <a href="#">github</a>
+        <h2>raw</h2>
+        <a href="#"><i class="ri-github-fill"></i></a>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

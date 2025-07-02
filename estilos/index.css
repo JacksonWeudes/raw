@@ -6,8 +6,8 @@
 :root{
     --title-font:  "Anton", arial, sans-serif;
     --text-font: "Share Tech Mono", monospace, arial, sans-serif;
-    --color-1: ;
-    --color-2: ;
+    --color-1:  #F8F5F0;
+    --color-2: #ff0000;
 }
 
 *{
@@ -55,9 +55,9 @@ header{
     justify-content: space-between;
     align-items: center;
 
-    border-bottom: 1px solid #ff0000;
+    border-bottom: 1px solid var(--color-2);
     z-index: 9;
-    background-color: #F8F5F0;
+    background-color: var(--color-1);
 }
 
 #menu-icon{
@@ -78,7 +78,7 @@ header{
 
 #logo{
     font-size: 2rem;
-    color: #ff0000;
+    color: var(--color-2);
 }
 
 #login-btn{
@@ -89,14 +89,14 @@ header{
 
     cursor: pointer;
     border: 1px solid;
-    color: #ff0000;
+    color: var(--color-2);
     background-color: transparent;
 }
 
 #menu-icon span{
     width: 100%;
     height: 2px;
-    background-color: #ff0000;
+    background-color: var(--color-2);
     transition: all .3s ease-in-out;
 }
 
@@ -117,8 +117,8 @@ header{
     left: -60%;
     bottom: 0;
     z-index: 9;
-    border-right: 1px solid #ff0000;
-    background-color: #F8F5F0;
+    border-right: 1px solid var(--color-2);
+    background-color: var(--color-1);
     transition: left .5s ease-in-out;
 }
 
@@ -140,7 +140,7 @@ header{
     text-transform: uppercase;
     font-size: 6vw;
     text-decoration: none;
-    color: #ff0000;
+    color: var(--color-2);
 }
 
 #hero{
@@ -149,31 +149,251 @@ header{
     align-items: center;
 
     height: 100dvh;
-    background-color: #F8F5F0;
+    background: var(--color-1) url(../assets/hero-bg.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 #hero h1{
     font-size: 20vw;
-    color: #ff0000;
+    color: var(--color-2);
+    text-shadow: 3px 5px 10px #000;
 }
 
 #about{
-    padding-block: 1.5rem;
     text-align: center;
-    background-color: #ff0000;
+    border-block: 1px solid var(--color-2);
+    color: var(--color-2);
+    background-color: var(--color-1);
 }
 
 #about h2{
+    width: 90%;
+    margin: auto;
+    padding-block: 1rem;
     font-size: 15vw;
+    border-bottom: 1px solid var(--color-2);
 }
 
 #about p{
     width: 90%;
+    padding-block: 2rem;
     margin: auto;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
-img{
+#hero2{
+    height: 120dvh;
+    background: var(--color-1) url(../assets/nakagin-capsule-tower.webp) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    filter: saturate(0%);
+}
+
+#explore h2{
+    width: 90%;
+    margin: auto;
+    font-size: 15vw;
+    text-align: center;
+    border-bottom: 1px solid;
+    color: var(--color-2);
+    background-color: var(--color-1);
+}
+
+#explore-cards{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: .9rem;
+    background-color: var(--color-1);
+}
+
+.card{
+    width: 400px;
+    height: auto;
+    margin: auto;
+    padding-block: .9rem;
+    margin-block: .9rem;
+    text-align: center;
+    border: 1px solid;
+    color: #ff0000;
+}
+
+.card h3{
+    font-size: 6vw;
+}
+
+.card p{
+    width: 80%;
+    padding-block: 1rem;
+    margin: auto;
+    font-size: 1.05rem;
+}
+
+.card img{
     width: 100%;
+    filter: saturate(0%);
+    transition: filter .3s ease-in-out;
+}
+
+.card img:hover{
+    filter: saturate(100%);
+}
+
+.card button{
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: .4rem 1rem;
+    border: 1px solid;
+    outline: none;
+    color: var(--color-2);
+    background-color: transparent;
+}
+
+#login-screen form{
+    padding-block: 3rem;
+    background-color: var(--color-1);
+}
+
+#login-screen form h1{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    font-size: 10vw;
+    color: var(--color-2);
+    border-block: 1px solid;
+}
+
+#login-screen .input-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-block: .9rem;
+    color: var(--color-2);
+}
+
+.input-box label{
+    font-size: 1.5rem;
+}
+
+.input-box input{
+    width: 70%;
+    padding: 5px 20px;
+    margin-block: .5rem;
+    background-color: transparent;
+    border: none;
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+    outline: none;
+    font-size: 1.1rem;
+    color: var(--color-2);
+}
+
+.input-box input:focus{
+    border: none;
+    outline: 1px solid var(--color-2); 
+}
+
+#remember-box{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: .9rem;
+    width: 80%;
+    margin: auto;
+}
+
+#remember-box label{
+    font-family: var(--text-font);
+    color: var(--color-2);
+}
+
+#remember{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    outline: none;
+}
+
+#remember:focus{
+    outline: 1px solid var(--color-2);
+}
+
+#form-btn{
+    width: 80%;
+    margin: auto;
+    margin-block: 1rem;
+    text-align: center;
+}
+
+#form-btn button{
+    cursor: pointer;
+    text-transform: uppercase;
+    width: 70%;
+    padding-block: .4rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: 1px solid;
+    outline: none;
+    background-color: transparent;
+    color: var(--color-2);
+}
+
+#form-btn button:focus{
+    color: var(--color-1);
+    background-color: var(--color-2);
+}
+
+#login-screen p{
+    text-align: center;
+    color: var(--color-2);
+}
+
+#social-links{
+    margin-top: 1.2rem;
+}
+
+#social-links ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+#social-links a{
+    padding: .2rem .4rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--color-2);
+    border: 1px solid;
+    outline: none;                          
+}
+
+#social-links a:focus{
+    background-color: var(--color-2);
+    color: var(--color-1);
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: var(--color-1);
+    background-color: var(--color-2);
+}
+
+footer a{
+    outline: none;
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--color-1);
+}
+
+footer a:focus{
+    outline: 1px solid var(--color-1);
 }
