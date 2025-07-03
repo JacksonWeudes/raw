@@ -17,6 +17,11 @@
     margin: 0;
 }
 
+body{
+    background-color: var(--color-1);
+    color: var(--color-2);
+}
+
 h1,
 h2,
 h3{
@@ -55,7 +60,7 @@ header{
     justify-content: space-between;
     align-items: center;
 
-    border-bottom: 1px solid var(--color-2);
+    border-bottom: 1px solid;
     z-index: 9;
     background-color: var(--color-1);
 }
@@ -78,19 +83,30 @@ header{
 
 #logo{
     font-size: 2rem;
-    color: var(--color-2);
 }
 
-#login-btn{
-    text-transform: uppercase;
-    font-size: 1.05rem;
-    font-weight: 600;
-    padding: .3rem .6rem;
+#menu-nav{
+    display: none;
+}
 
-    cursor: pointer;
-    border: 1px solid;
+#menu-nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+#menu-nav a{
+    text-decoration: none;
+    text-transform: uppercase;
     color: var(--color-2);
-    background-color: transparent;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+#menu-nav a:hover{
+    border-bottom: 1px solid;
 }
 
 #menu-icon span{
@@ -117,7 +133,7 @@ header{
     left: -60%;
     bottom: 0;
     z-index: 9;
-    border-right: 1px solid var(--color-2);
+    border-right: 1px solid;
     background-color: var(--color-1);
     transition: left .5s ease-in-out;
 }
@@ -149,22 +165,19 @@ header{
     align-items: center;
 
     height: 100dvh;
-    background: var(--color-1) url(../assets/hero-bg.jpg) no-repeat;
+    background: url(../assets/hero-bg.jpg) no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
 
 #hero h1{
-    font-size: 20vw;
-    color: var(--color-2);
+    font-size: 18vw;
     text-shadow: 3px 5px 10px #000;
 }
 
 #about{
     text-align: center;
-    border-block: 1px solid var(--color-2);
-    color: var(--color-2);
-    background-color: var(--color-1);
+    border-block: 1px solid;
 }
 
 #about h2{
@@ -172,7 +185,7 @@ header{
     margin: auto;
     padding-block: 1rem;
     font-size: 15vw;
-    border-bottom: 1px solid var(--color-2);
+    border-bottom: 1px solid;
 }
 
 #about p{
@@ -185,7 +198,7 @@ header{
 
 #hero2{
     height: 120dvh;
-    background: var(--color-1) url(../assets/nakagin-capsule-tower.webp) no-repeat;
+    background: url(../assets/nakagin-capsule-tower.webp) no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
@@ -198,26 +211,22 @@ header{
     font-size: 15vw;
     text-align: center;
     border-bottom: 1px solid;
-    color: var(--color-2);
-    background-color: var(--color-1);
 }
 
 #explore-cards{
     display: grid;
     grid-template-columns: 1fr;
     padding: .9rem;
-    background-color: var(--color-1);
 }
 
 .card{
-    width: 400px;
+    min-width: 50%;
     height: auto;
     margin: auto;
     padding-block: .9rem;
     margin-block: .9rem;
     text-align: center;
     border: 1px solid;
-    color: #ff0000;
 }
 
 .card h3{
@@ -254,16 +263,15 @@ header{
 
 #login-screen form{
     padding-block: 3rem;
-    background-color: var(--color-1);
 }
 
 #login-screen form h1{
     width: 90%;
     margin: auto;
+    margin-bottom: 2rem;
     text-align: center;
     font-size: 10vw;
-    color: var(--color-2);
-    border-block: 1px solid;
+    border-bottom: 1px solid;
 }
 
 #login-screen .input-box{
@@ -272,7 +280,7 @@ header{
     align-items: center;
     gap: 1rem;
     padding-block: .9rem;
-    color: var(--color-2);
+
 }
 
 .input-box label{
@@ -308,7 +316,6 @@ header{
 
 #remember-box label{
     font-family: var(--text-font);
-    color: var(--color-2);
 }
 
 #remember{
@@ -349,7 +356,6 @@ header{
 
 #login-screen p{
     text-align: center;
-    color: var(--color-2);
 }
 
 #social-links{
@@ -379,21 +385,87 @@ header{
 }
 
 footer{
+    width: 90%;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    color: var(--color-1);
-    background-color: var(--color-2);
+    border-top: 1px solid var(--color-2);
+    color: var(--color-2);
+    background-color: var(--color-1);
 }
 
 footer a{
     outline: none;
     font-size: 2rem;
     text-decoration: none;
-    color: var(--color-1);
+    color: var(--color-2);
 }
 
 footer a:focus{
     outline: 1px solid var(--color-1);
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px){
+    #hero h1{
+        font-size: 17vw;
+    }
+    .input-box input{
+        width: 35%;
+    }
+    #remember-box{
+        width: 40%;
+    }
+    #form-btn button{
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 992px){
+    header{
+        padding-inline: 4rem;
+    }
+    #menu-nav{
+        display: block;
+    }
+    #menu-icon{
+        display: none;
+    }
+    #hero h1{
+        font-size: 15vw;
+    }
+    #about p{
+        width: 60%;
+        padding-block: 5rem;
+        font-size: 1.7rem;
+    }
+    #explore-cards{
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+    .card{
+        max-width: 85%;
+    }
+    .card h3{
+        font-size: 2.5vw;
+    }
+    .card p{
+        font-size: 1.4rem;
+    }
+    .card button{
+        font-size: 1.2rem;
+    }
+    .input-box input{
+        width: 30%;
+    }
+    #remember-box{
+        width: 33%;
+    }
+    #form-btn button{
+        width: 30%;
+    }
+    #login-screen p{
+        font-size: 1.3rem;
+    }
 }
