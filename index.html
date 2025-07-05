@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RAW</title>
     <link rel="stylesheet" href="estilos/index.css">
+    <!-- biblioteca de icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
+    <!-- div de overlay para quando menu for ativado -->
     <div id="overlay"></div>
 
+    <!-- cabeçalho com icone do menu logo e umm menu nav que fica escondido, quando a tela diminui -->
     <header>
+        <!-- icone com spans para animação -->
         <button id="menu-icon">
             <span></span>
             <span></span>
@@ -30,7 +34,9 @@
         </div>
     </header>
 
+    <!-- conteúdo principal com seções -->
     <main>
+        <!-- menu lateral que fica escondido em telas maiores -->
         <aside id="side-menu" class="closed">
             <nav>
                 <ul>
@@ -41,10 +47,12 @@
             </nav>
         </aside>
 
+        <!-- área de destaque -->
         <section id="hero">
             <h1>brutalismo no webdesign</h1>
         </section>
 
+        <!-- seção com introdução -->
         <section id="about">
             <h2>introdução</h2>
             <p>
@@ -52,19 +60,20 @@
             </p>
         </section>
 
-        <section id="hero2">
+        <!-- segunda área de destaque -->
+        <section id="hero2"></section>
 
-        </section>
-
+        <!-- seção de exploração -->
         <section id="explore">
             <h2>explore</h2>
 
+            <!-- div container com cards, aplicar display grid para uma coluna em telas menores e três em telas maiores -->
             <div id="explore-cards">
                 <div class="card">
                     <h3>arquitetura brutalista</h3>
                     <img src="assets/img2.jpg" alt="arquitetura">
                     <p>
-                        entenda onde esse estilo nasceu e seus principais simbolos.
+                        veja onde esse estilo nasceu e algumas características.
                     </p>                    
                     <button id="btn1">visitar</button>
                 </div>
@@ -73,7 +82,7 @@
                     <h3>webdesing</h3>
                     <img src="assets/webdesign.webp" alt="webdesign">
                     <p>
-                        da estetica fria dos predios até á liguagem virtual da internet.
+                        da estética fria dos prédios até á liguagem virtual da internet.
                     </p>
                     <button id="btn2">visitar</button>
                 </div>
@@ -89,13 +98,14 @@
             </div>
         </section>
 
+        <!-- seção com tela de cadastro -->
          <section id="login-screen">
             <form action="">
                 <h1>cadastro</h1>
 
                 <div class="input-box">
                     <label for="user"><i class="ri-user-fill"></i></label>
-                    <input type="text">
+                    <input type="text" id="user" required placeholder="usuário">
                 </div>
 
                 <div class="input-box">
@@ -136,8 +146,11 @@
         <a href="https://github.com/JacksonWeudes" target="_blank"><i class="ri-github-fill"></i></a>
     </footer>
 
+    <!-- incluindo as bibliotecas GSAP para animação -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+
+
     <script src="script.js"></script>
 </body>
 </html>
